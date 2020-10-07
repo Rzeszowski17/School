@@ -5,11 +5,12 @@
 Początek plik
 <hr>
 <?php //Dołączenie plik php
-	include './Do_4.php';
-	include_once './Do_4.php';
-	
-	require './Do_4.php';
-	require_once './Do_4.php';
+	echo '<br>include<br>';
+	include './Do_3.php';
+	include_once './Do_3.php';
+	echo '<br>require<br>';
+	require './Do_3.php';
+	require_once './Do_3.php';
 ?>
 <hr>
 Koniec pliku
