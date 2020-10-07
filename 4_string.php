@@ -4,25 +4,32 @@
 <body>
 <?php
 	$text = <<< T
-	zsl - Zespół Szkół Łączności 
+	zsl - Zespół 
+	Szkół 
+	Łączności 
 T;
 	echo $text;
+	echo"<hr>";
 	echo nl2br($text);  //karzdy enter pomiedzy słowami jest traktowany jako <br>
+	echo"<hr>";
 	
 	$name = 'jaNUsZ';
-//zamiana na małe literyh 
+	//zmiana na małe litery (sanityzacja kodu)
 	$name = strtolower($name);
-	echo $name;
+	echo $name;   //janusz
 	echo"<hr>";
-	$name = 'jaNUsZ';
-	//zmiana na duże literyh
+	
+	$name = 'KrysTYna';
+	//zmiana wszystkich liter literyh na duże
 	echo strtoupper($name);
 	echo"<hr>";
-	//zmiania pierwszej litery na duża
+	
+	//zmiania pierwszej litery na duża w pierwszym wyrazie 
 	$name = 'aNNa noWak z poznania';
 	echo ucfirst($name);
 	echo"<hr>";
-	//zmiania pierwszej litery na duża
+	
+	//zmiania pierwszej litery na duża wszystkich wyrazów
 	$name = 'aNNa noWak z poznania';
 	echo ucwords($name);
 	echo"<hr>";
@@ -47,7 +54,7 @@ nunc vestibulum.
 LOREM;
 	echo $lorem;
 	echo"<hr>";
-	$col = wordwrap($lorem, 40, '<br>');
+	$col = wordwrap($lorem, 40, '<br>'); //zawija tekst do nowje lini po 40 znakach
 	echo $col;
 	echo"<hr>";
 	
@@ -60,36 +67,48 @@ LOREM;
 	// ob_clean();
 	// usuwanie białych znaków
 	$name="Anna";
-	$name1="   Anna";
-	echo 'Dlugość $name', strlen($name); //4
+	$name1="   Anna ";
+	echo 'Dlugość $name', strlen($name); //4 strlen wyswietka ilość znaków 
 	echo"<hr>";
-	echo 'Dlugość $name', strlen($name1); //7
+	echo 'Dlugość $name', strlen($name1); //8 strlen wyswietka ilość znaków rownież ze spacjami
 	echo"<hr>";
-	echo strlen(ltrim($name1)); //5
+	echo strlen(ltrim($name1)); //5 usuwa białe znak z lewje strony i wyswietla ile jest znaków
 	echo"<hr>";
-	echo strlen(trim($name1)); //4
+	echo strlen(rtrim($name1));//7 usuwa białe znak z prawej strony i wyswietla ile jest znaków
+	echo"<hr>";
+	echo strlen(trim($name1)); //4 usuwan białe znaki z obydwu stron i wyswietla ile jest znaków
 	
 	echo"<hr>";
-	echo strlen($name1);
-	$name1=trim($name1);
-	echo strlen($name1);
+	
+	echo strlen($name1); //8 
+	$name1=trim($name1); //  usuwa znaki z obydwu stron
+	echo strlen($name1); // wyświetla liczbe znaków bez białych znaków
 	echo"<hr>";
+	
 	//przeszukiwanie ciągów znaków
+	$address="Poznań, ul. Polna 2, tel. (61)123-45-67";
+	$search=strstr($address, 'tel'); //wyszukuej i wyswitla od slowa klucz w prawo 
+	echo "<br>$search<br>"; //tel. (61)123-45-67
+	echo"<hr>";
+	
 	$address = "Poznań, ul. Polna 2, tel (61)123-34-67";
-	$search = strstr($address,'tel', true);
+	$search = strstr($address,'tel', true); //wyszukuje i wyswitla ciag zakow przed znalezionym slowe klucz
 	echo "<br>$search<br>";
 	
 	echo"<hr>";
 	$address = "Poznań, ul. Polna 2, tel (61)123-34-67";
-	$search = stristr($address,'Tel');
+	$search = stristr($address,'Tel'); // ignoruje wielkość liter w slowie klucz
 	echo "<br>$search<br>";
 	
 	echo"<hr>";
-	echo strstr('zsl@gmail.com', '@'); //@gmail.com
+	echo strstr('zsl@gmail.com', '@'); //@gmail.com wyswitla od znaku
 	echo"<hr>";
-	echo strstr('zsl@gmail.com', 64); //@gmail.com
+	echo strstr('zsl@gmail.com', 64); //@gmail.com wyswietla od znaku w kodzie ascii
+	echo"<hr>";
 	
-	//$domain = substr(strstr('zsl@gamil.com'), '@'), 0);
+	$domain=substr(strstr('zsl@gmail.com','@'),1); // wyswietla sie bez znoku okreslonego liczba w tym przypadku bez małpy
+	echo $domain; //gmail.com
+
 	
 	
 	
