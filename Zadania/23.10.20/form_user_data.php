@@ -8,7 +8,7 @@
 
 $important=[empty($_POST['First']), empty($_POST['Last']), 
 empty($_POST['Address1']), 
-empty($_POST['City']), empty($_POST['ZIP']),
+empty($_POST['City']), empty($_POST['Province']), empty($_POST['ZIP']),
 empty($_POST['Phone']) ];
 
 if(in_array(true, $important)){
@@ -90,9 +90,9 @@ switch($_POST['account']){
     DATA;
     }        
 ?>
-<script type="text/javascript">
+<script >
 function goBack() {
-  window.history.back();
+  window.history.go(-1)
 }
 </script>
 

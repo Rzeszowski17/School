@@ -28,11 +28,11 @@ table{
      <input type="radio" name="account" value="BUS" requried>Business Account</td>
 </tr>
 <tr>  <td> First Name*</td>
-<td> <input type="text" name="First" requried pattern="[A-ZĄĆĘŁŃÓŚŹŻa-ząćęłńóśźż ]{2,10}" autocomplete="off"></td>
+<td> <input type="text" name="First" value="" requried pattern="[A-ZĄĆĘŁŃÓŚŹŻa-ząćęłńóśźż ]{2,10}" ></td>
 </tr>
 <tr>
 <td>Last Name*</td>
-<td><input type="text" name="Last"  requried pattern="[A-ZĄĆĘŁŃÓŚŹŻa-ząćęłńóśźż ]{2,20}" autocomplete="off"></td>
+<td><input type="text" name="Last" value="" requried pattern="[A-ZĄĆĘŁŃÓŚŹŻa-ząćęłńóśźż ]{2,20}" ></td>
 </tr>
 <tr>
 <td>Country/Region*</td>
@@ -44,15 +44,15 @@ table{
 </tr>
 <tr>
 <td>Street Address*</td>
-<td><input type="text" name="Address1"  autocomplete="off"requried ></td>
+<td><input type="text" name="Address1"  value="" requried ></td>
 </tr>
 <tr>
 <td>Street Address 2</td>
-<td><input type="text" name="Address2"autocomplete="off"></td>
+<td><input type="text" name="Address2" value="" ></td>
 </tr>
 <tr>
 <td>City*</td>
-<td><input type="text" name="City"  autocomplete="off" requried ></td>
+<td><input type="text" name="City" value="" utocomplete="off" requried ></td>
 </tr>
 <tr>
 <td>State/Province*</td>
@@ -65,7 +65,7 @@ table{
 </tr>
 <tr>
 <td>ZIP/Postal Code*</td>
-<td><input type="text" name="ZIP" size="6" requried pattern="[0-9]{2}-[0-9]{3}|[0-9]{5}" autocomplete="off"></td>
+<td><input type="text" name="ZIP" size="6" value="" requried pattern="[0-9]{2}-[0-9]{3}|[0-9]{5}" ></td>
 </tr>
 <tr>
 <td>  </td>
@@ -73,7 +73,7 @@ table{
 </tr>
 <tr>
 <td>Phone Number*</td>
-<td><input type="text" name="Phone" size="19" requried autocomplete="off" ></td>
+<td><input type="text" name="Phone" size="19" value="" requried ></td>
 </tr>
 <tr>
 <td colspan=2><center><input type="submit" name="button" value="Send"></center></td>
