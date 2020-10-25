@@ -12,21 +12,15 @@ empty($_POST['City']), empty($_POST['ZIP']),
 empty($_POST['Phone']) ];
 
 if(in_array(true, $important)){
-?>
-<h4>Nie wypełniłeś wymaganych pól</h4>
-<button onclick="goBack()">Powró do formularza</button>
 
-<script>
-function goBack() {
-  window.history.back();
-}
-</script>
+echo "<h4>Nie wypełniłeś wymaganych pól</h4>";
+echo "<button onclick=goBack()>Powró do formularza</button>";
 
-<?php
 }
 
 else{
 
+$ACC=$_POST['account'];
 switch($_POST['account']){
     case'PER':
     $ACC='Personal Account';   
@@ -94,5 +88,10 @@ switch($_POST['account']){
     DATA;
     }        
 ?>
+<script>
+function goBack() {
+  history.back();
+}
+</script>
 </body>
 </html>

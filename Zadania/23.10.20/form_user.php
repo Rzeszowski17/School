@@ -24,8 +24,8 @@ table{
 <form action="./form_user_data.php" method="post" >
 <tr><td colspan=2>(*) Required fields</td></tr>
 <tr> <td class="pi">Account Type*</td>
-<td> <input type="radio" name="account" requried checked >Personal Account
-     <input type="radio" name="account" requried>Business Account</td>
+<td> <input type="radio" name="account" value="PER" requried checked >Personal Account
+     <input type="radio" name="account" value="BUS" requried>Business Account</td>
 </tr>
 <tr>  <td> First Name*</td>
 <td> <input type="text" name="First" requried pattern="[A-ZĄĆĘŁŃÓŚŹŻa-ząćęłńóśźż ]{2,10}" autocomplete="off"></td>
