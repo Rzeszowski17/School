@@ -65,7 +65,7 @@ table{
 </tr>
 <tr>
 <td>ZIP/Postal Code*</td>
-<td><input type="text" name="ZIP" size="6" requried pattern="[0-9]{5,}" autocomplete="off"></td>
+<td><input type="text" name="ZIP" size="6" requried pattern="[0-9]{2}-[0-9]{3}|[0-9]{5}" autocomplete="off"></td>
 </tr>
 <tr>
 <td>  </td>

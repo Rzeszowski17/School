@@ -75,6 +75,8 @@ switch($_POST['account']){
         $name2=ucwords(strtolower(trim("$name")));
         $surname2=ucwords(strtolower(trim("$surname")));       
 
+        $ZIP = preg_replace('/^([0-9]{2})([0-9]{3})$/', '$1-$2', $ZIP);
+
         echo<<<DATA
         <h4>Dane użytkownika</h4>
         Account Type: $ACC<br>
@@ -88,10 +90,11 @@ switch($_POST['account']){
     DATA;
     }        
 ?>
-<script>
+<script type="text/javascript">
 function goBack() {
-  history.back();
+  window.history.back();
 }
 </script>
+
 </body>
 </html>
