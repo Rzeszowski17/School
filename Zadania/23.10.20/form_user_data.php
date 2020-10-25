@@ -7,7 +7,7 @@
 <?php
 
 $important=[empty($_POST['First']), empty($_POST['Last']), 
-empty($_POST['Address1']), empty($_POST['Address2']), 
+empty($_POST['Address1']), 
 empty($_POST['City']), empty($_POST['ZIP']),
 empty($_POST['Phone']) ];
 
