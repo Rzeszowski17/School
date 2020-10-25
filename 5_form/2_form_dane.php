@@ -7,8 +7,9 @@
 </head>
 <body>
     <h4>Dane z formularza</h4>
+
     <?php
-print_r
+    print_r($_POST);
     ?>
 </body>
 </html>
