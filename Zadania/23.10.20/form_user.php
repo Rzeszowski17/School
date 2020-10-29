@@ -37,9 +37,9 @@ table{
 <tr>
 <td>Country/Region*</td>
 <td><select name="country" requried >
-<option values="u">USA</option>
-<option values="p">Polska</option>
-<option values="g">Grecja</option>
+<option value="u">USA</option>
+<option value="p">Polska</option>
+<option value="g">Grecja</option>
 </select></td>
 </tr>
 <tr>
@@ -57,10 +57,10 @@ table{
 <tr>
 <td>State/Province*</td>
 <td><select name="Province" requried>
-<option valuse="S"  disabled selected>Select State or Province</option>
-<option values="w">Wielkopolskie</option>
-<option values="z">Zachodniopomorskie</option>
-<option values="m">Małopolskie</option>
+<option value="S"  disabled selected>Select State or Province</option>
+<option value="w">Wielkopolskie</option>
+<option value="z">Zachodniopomorskie</option>
+<option value="m">Małopolskie</option>
 </select></td>
 </tr>
 <tr>
