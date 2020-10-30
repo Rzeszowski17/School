@@ -19,15 +19,15 @@ table{
 <body>
     <table>
     <tr><td><div class="baner">Kalkulator</div></td></tr>
-    <form action="./function.php" method="post">
+    <form action="" method="GET">
     <tr>
     <td><input type="number" value="x" placeholder="x" pattern="[0-9]"></td>
     <td>
     <select name="sign">
-    <option value="pl">+</option>
-    <option value="mi">-</option>
-    <option value="mu">*</option>
-    <option value="di">/</option>
+    <option value="sum">+</option>
+    <option value="ode">-</option>
+    <option value="mno">*</option>
+    <option value="dzi">/</option>
     </select>
     </td>
     <td><input type="number" value="y" placeholder="y" pattern="[0-9]"></td>
@@ -36,5 +36,11 @@ table{
     <tr>
     </form>
     </table>
+
+<?php
+    require_once './function.php';
+
+?>
+
 </body>
 </html>
