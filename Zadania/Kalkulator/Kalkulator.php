@@ -49,10 +49,8 @@ table{
     $x=$_POST['x'];
     $y=$_POST['y'];
     
-if (isset($_POST['sign'])){
-
-    $option=$_POST['sign'];
-    switch($option){
+    switch($_POST['sign']){
+        
         case'add':
             $result = add($x, $y);
     break;
@@ -75,7 +73,7 @@ if (isset($_POST['sign'])){
     }
   }  
 }
-    }
+    
 ?>
  
 
