@@ -31,7 +31,7 @@ table{
     </select>
     </td>
     <td><input type="number" value="y" placeholder="y" pattern="[0-9]"></td>
-    <td><input type="submit" value="="> </td>
+    <td><input type="submit" namo="submit" value="="> </td>
     <td><input type="number"  name="result" value= "<?php if(isset ($result)){echo $result;}?>"disabled></td>
     </tr>
     </form>
@@ -40,12 +40,17 @@ table{
 <?php
     require_once './function.php';
 
+    if(isset($_POST['submit'])) 
+	{
+
     if(is_numeric($_POST['x']) && is_numeric($_POST['y'])) 
     {
+
     $x=$_POST['x'];
     $y=$_POST['y'];
     
 if (isset($_POST['sign'])){
+
     $option=$_POST['sign'];
     switch($option){
         case'add':
@@ -70,6 +75,7 @@ if (isset($_POST['sign'])){
     }
   }  
 }
+    }
 ?>
  
 
