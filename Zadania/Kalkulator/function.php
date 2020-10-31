@@ -1,34 +1,19 @@
 <?php
-
-    $x=isset($_POST['x']);
-    $y=isset($_POST['y']); 
-
-
-if(isset($_POST['option'])){
-   switch ($option){
-        case'add':
-            function add($x, $y):string{
-                $result = $x + $y;
-                return $result;
+            function add($x, $y){
+                return $x + $y;
               }
-              echo sum($x, $y);
-        break;
-   
-        case'sub':
-            function sub($x, $y):string{
-                $result = $x - $y;
-                return $result;
-              } 
-        break;
-   
-        case'mul':
-            function mul($x, $y):string{
-                $result = $x * $y;
-                return $result;
-              }
-        break;
 
-        case'div':
+            function sub($x, $y){
+                return $x - $y;
+            }
+ 
+   
+
+            function mul($x, $y){
+                return $x * $y;
+              }
+
+
             function div($x, $y){
               if(y==0)
               {
@@ -36,17 +21,7 @@ if(isset($_POST['option'])){
               }
               else
               {
-                $result = $x / $y;
-                return $result;
-
+                return $x / $y;
               }
             }
-        break;
-
-        default:
-
-        
-    }  
-}
-
 ?>

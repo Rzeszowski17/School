@@ -23,7 +23,7 @@ table{
     <tr>
     <td><input type="number" value="x" placeholder="x" pattern="[0-9]"></td>
     <td>
-    <select>
+    <select name="sign">
     <option value="add">+</option>
     <option value="sub">-</option>
     <option value="mul">*</option>
@@ -32,15 +32,48 @@ table{
     </td>
     <td><input type="number" value="y" placeholder="y" pattern="[0-9]"></td>
     <td><input type="submit" value="="> </td>
-    <td><input type="number"  disabled></td>
-    <tr>
+    <td><input type="number"  name="result" value= "<?php if(isset ($result)){echo $result;}?>"disabled></td>
+    </tr>
     </form>
     </table>
 
 <?php
-    require_once('./function.php');
+    require_once './function.php';
 
+    if(is_numeric($_POST['x']) && is_numeric($_POST['y'])) 
+    {
+    $x=$_POST['x'];
+    $y=$_POST['y'];
+    
+if (isset($_POST['sign'])){
+    $option=$_POST['sign'];
+    switch($option){
+        case'add':
+            $result = add($x, $y);
+    break;
+
+        case'sub':
+            $result = sub($x, $y);
+    break;
+
+        case'mul':
+            $result = mul($x, $y);
+    break;
+
+        case'div':
+            $result = div($x, $y);
+    break;
+
+    default:
+            $result = "No option";
+	break;
+    }
+}
+    }
 ?>
+ 
+
+
 
 </body>
 </html>
