@@ -21,7 +21,7 @@ table{
     <tr><td><div class="baner">Kalkulator</div></td></tr>
     <form method="POST">
     <tr>
-    <td><input type="number" value="x" placeholder="x" pattern="[0-9]"></td>
+    <td><input type="number" name="x" placeholder="x"></td>
     <td>
     <select name="sign">
     <option value="add">+</option>
@@ -30,9 +30,9 @@ table{
     <option value="div">/</option>
     </select>
     </td>
-    <td><input type="number" value="y" placeholder="y" pattern="[0-9]"></td>
-    <td><input type="submit" namo="submit" value="="> </td>
-    <td><input type="number"  name="result" value= "<?php if(isset ($result)){echo $result;}?>"disabled></td>
+    <td><input type="number" name="y" placeholder="y" ></td>
+    <td><input type="submit" name="submit" value="="> </td>
+    <td><input type="number"  name="result" disabled value="<?php if(isset ($result)){echo $result;}?>"></td>
     </tr>
     </form>
     </table>
@@ -45,12 +45,11 @@ table{
 
     if(is_numeric($_POST['x']) && is_numeric($_POST['y'])) 
     {
-
     $x=$_POST['x'];
     $y=$_POST['y'];
     
     switch($_POST['sign']){
-        
+
         case'add':
             $result = add($x, $y);
     break;

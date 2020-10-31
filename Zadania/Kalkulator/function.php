@@ -7,13 +7,10 @@
                 return $x - $y;
             }
  
-   
-
             function mul($x, $y){
                 return $x * $y;
               }
-
-
+              
             function div($x, $y){
               if(y==0)
               {
