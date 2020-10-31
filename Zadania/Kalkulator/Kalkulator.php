@@ -19,26 +19,26 @@ table{
 <body>
     <table>
     <tr><td><div class="baner">Kalkulator</div></td></tr>
-    <form action="" method="GET">
+    <form method="POST">
     <tr>
     <td><input type="number" value="x" placeholder="x" pattern="[0-9]"></td>
     <td>
-    <select name="sign">
-    <option value="sum">+</option>
-    <option value="ode">-</option>
-    <option value="mno">*</option>
-    <option value="dzi">/</option>
+    <select>
+    <option value="add">+</option>
+    <option value="sub">-</option>
+    <option value="mul">*</option>
+    <option value="div">/</option>
     </select>
     </td>
     <td><input type="number" value="y" placeholder="y" pattern="[0-9]"></td>
     <td><input type="submit" value="="> </td>
-    <td><input type="number" value="score"></td>
+    <td><input type="number"  disabled></td>
     <tr>
     </form>
     </table>
 
 <?php
-    require_once './function.php';
+    require_once('./function.php');
 
 ?>
 
