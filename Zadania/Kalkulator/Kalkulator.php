@@ -68,8 +68,8 @@ if (isset($_POST['sign'])){
             $result = "No option";
 	break;
     }
+  }  
 }
-    }
 ?>
  
 
