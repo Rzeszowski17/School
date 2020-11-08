@@ -63,18 +63,12 @@ hr{
 
     function prost(){
 
-    if (empty($_POST['a']) || empty($_POST['b']) || empty($_POST['c']) || (!is_numeric($_POST['a']) || !is_numeric($_POST['b'] || (!is_numeric($_POS['c']){
-       // if (($_GET['a']==''||$_GET['h']=='')||(!is_numeric($_GET['a'])||!is_numeric($_GET['h'])))
-        //if(in_array(true, $important)){
-
-            echo "<h4>Dane podane w formularzu muszę być liczbami!</h4>";
-
-            }
-            
-    else{
-    
     if (isset($_POST['a'],$_POST['b'], $_POST['c'])){
-         if($_POST['a']<=0 || $_POST['b']<=0 || $_POST['c']<=0){
+        if (($_POST['a']==''||$_POST['b']==''||$_POST['c']=='')||(!is_numeric($_GET['a'])||!is_numeric($_GET['b'])||!is_numeric($_GET['c']))){
+            echo "<br><h4>Dane podane w formularzu muszą być liczbami!</h4>";
+        }
+
+        else if($_POST['a']<=0 || $_POST['b']<=0 || $_POST['c']<=0){
             echo "<br><h4>Liczby podane w polach powinny być dodatnei</h4>";
         }
         else{
@@ -92,7 +86,7 @@ hr{
     }
 
     }
-}
+
     
 
     ?>
