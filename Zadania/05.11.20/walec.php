@@ -59,18 +59,21 @@ hr{
     <?php
     function walec(){
     if (isset($_POST['r'],$_POST['h'])){
-         if($_POST['r']<=0 || $_POST['h']<=0){
-            echo "<br><h4>Liczby podane w polach powinny być dodatnei</h4>";
+        if (($_POST['r']==''||$_POST['h']=='')){
+            echo "<br><h4>Dane podane w formularzu muszą być liczbami!</h4>";
+        }
+        else if($_POST['r']<=0 || $_POST['h']<=0){
+            echo "<br><h4>Dane podane w formularzu muszą być liczbami dodatnimi!</h4>";
         }
         else{
             require_once('./scripts/walec.php');
 
 
         echo '<ul>';
-        echo '<li>Pole podstawy:'.Pole_Wale($r).'cm<sup>3</sup></li>';
-        echo '<li>Pole powierzchni bocznej:'.Polepb_Wale($r,$h).'cm<sup>3</sup></li>';
-        echo '<li>Pole powierzchni całkwitej:'.Polepc_Wale($r,$h).'cm<sup>3</sup></li>';
-        echo '<li>Objętość:'.Obje_Wale($h,$r).'cm<sup>3</sup></li>';
+        echo '<li>Pole podstawy:'.Pop_wale($r).'cm<sup>3</sup></li>';
+        echo '<li>Pole powierzchni bocznej:'.Po_PB_wale($r,$h).'cm<sup>3</sup></li>';
+        echo '<li>Pole powierzchni całkwitej:'.Po_PC_wale($r,$h).'cm<sup>3</sup></li>';
+        echo '<li>Objętość:'.Ob_wale($h,$r).'cm<sup>3</sup></li>';
         echo '</ul>';
 
 

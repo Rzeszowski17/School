@@ -57,19 +57,22 @@ hr{
 
     function szesc(){
     if (isset($_POST['a'])){
-         if($_POST['a']<=0){
-            echo "<br><h4>Liczby podane w polach powinny być dodatnei</h4>";
+        if ($_POST['a']==''){
+            echo "<br><h4>Dane podane w formularzu muszą być liczbami!</h4>";
+        }
+         else if($_POST['a']<=0){
+            echo "<br><h4>Dane podane w formularzu muszą być liczbami dodatnimi!</h4>";
         }
         else{
             require_once('./scripts/szescian.php');
 
 
         echo '<ul>';
-        echo '<li>Pole:'. Pc_szescian($a).'cm<sup>2</sup></li>';
-        echo '<li>Objętość:'.V_szesc($a).'cm<sup>3</sup></li>';
-        echo '<li>Długość przekątnej:'.d_szesc($a).'cm</li>';
-        echo '<li>Promiń kuli wisanej w sześcian: '.r_szesc($a).'cm</li>';
-        echo '<li>Promiń kuli opisaenej w sześcian: '.r_kulsze($a).'cm</li>';
+        echo '<li>Pole:'. Po_szesc($a).'cm<sup>2</sup></li>';
+        echo '<li>Objętość:'.Ob_szesc($a).'cm<sup>3</sup></li>';
+        echo '<li>Długość przekątnej:'.Przeka_szesc($a).'cm</li>';
+        echo '<li>Promiń kuli wpisanej w sześcian: '.Wpi_szesc($a).'cm</li>';
+        echo '<li>Promiń kuli opisaenej na sześcianie: '.Opi_kulsze($a).'cm</li>';
         echo '</ul>';
 
 

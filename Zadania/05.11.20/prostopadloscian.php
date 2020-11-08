@@ -64,21 +64,21 @@ hr{
     function prost(){
 
     if (isset($_POST['a'],$_POST['b'], $_POST['c'])){
-        if (($_POST['a']==''||$_POST['b']==''||$_POST['c']=='')||(!is_numeric($_GET['a'])||!is_numeric($_GET['b'])||!is_numeric($_GET['c']))){
+        if (($_POST['a']==''||$_POST['b']==''||$_POST['c']=='')){
             echo "<br><h4>Dane podane w formularzu muszą być liczbami!</h4>";
         }
 
         else if($_POST['a']<=0 || $_POST['b']<=0 || $_POST['c']<=0){
-            echo "<br><h4>Liczby podane w polach powinny być dodatnei</h4>";
+            echo "<br><h4>Dane podane w formularzu muszą być liczbami dodatnimi!</h4>";
         }
         else{
             require_once('./scripts/prostopadloscian.php');
 
 
         echo '<ul>';
-        echo '<li>Pole:'.Pole_Prosto($a,$b,$c).'cm<sup>2</sup></li>';
-        echo '<li>Objętość:'.Obje_Prosto($a,$b,$c).'cm<sup>3</sup></li>';
-        echo '<li>Długość przekątnej:'.Dlugo_Prosto($a,$b,$c).'cm</li>';
+        echo '<li>Pole:'.Po_Pros($a,$b,$c).'cm<sup>2</sup></li>';
+        echo '<li>Objętość:'.Ob_Pros($a,$b,$c).'cm<sup>3</sup></li>';
+        echo '<li>Długość przekątnej:'.Przeka($a,$b,$c).'cm</li>';
         echo '</ul>';
 
 

@@ -3,19 +3,19 @@ if (isset($_POST['a'])){
     $a=$_POST['a'];
     }
 
-    function Pc_szescian($a){
+    function Po_szesc($a){
         return number_format(round(6*pow($a,2),2),2,'.','');
     }
-    function V_szesc($a){
+    function Ob_szesc($a){
         return number_format(round(pow($a,3),2),2,'.','');
     }
-    function d_szesc($a){
+    function Przeka_szesc($a){
         return number_format(round($a*sqrt(3),2),2,'.','');
     }
-    function r_szesc($a){
+    function Wpi_szesc($a){
         return number_format(round(($a/2),2),2,'.','');
     }
-    function r_kulsze($a){
-        return number_format(round(d_szesc(($a)/2),2),2,'.','');
+    function Opi_kulsze($a){
+        return number_format(round(Przeka_szesc(($a)/2),2),2,'.','');
     }
 ?>
