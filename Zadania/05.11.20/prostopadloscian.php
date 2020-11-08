@@ -63,7 +63,7 @@ hr{
 
     function prost(){
     if (isset($_POST['a'],$_POST['b'], $_POST['c'])){
-         if($_POST['a']<=0||$_POST['b']<=0||$_POST['c']<=0){
+         if($_POST['a']<=0 || $_POST['b']<=0 || $_POST['c']<=0){
             echo "<br><h4>Liczby podane w polach powinny być dodatnei</h4>";
         }
         else{
