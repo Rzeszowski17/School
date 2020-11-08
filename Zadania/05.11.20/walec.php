@@ -20,6 +20,7 @@ hr{
 </head>
 <body>
     <table>
+    <form method="POST">
     <tr>
     <td><div class="baner">Walec<div></td>
     </tr>
@@ -35,17 +36,48 @@ hr{
     <td><div class="baner">Dane<div></td>
     </tr>
     <tr>
-    <td><input type="number" name="a"  placeholder="a" pattern="[0-9]"></td>
+    <td><input type="number" name="r"  placeholder="r"value="<?php echo$_POST['r']?>" pattern="[0-9]"></td> 
     </tr>
     <tr>
-    <td><input type="number" name="b"  placeholder="b" pattern="[0-9]"></td>
-    </tr>
-    <tr>
-    <td><input type="number" name="c"  placeholder="c" pattern="[0-9]"></td>
+    <td><input type="number" name="h"  placeholder="h" value="<?php echo$_POST['h']?>" pattern="[0-9]"></td>
     </tr>
     <tr>
     <td><input type="submit" name="oblicz" value="Oblicz"></td>
     </tr>
+    <tr>
+    <td>
+    <?php  
+    echo walec()
+    ?>
+    </td>
+    </tr>
+    <tr>
+    <td><a href="3_zadanie_formularz_geometria.php">Powrót do strony głównej</a></td>
+    </tr>
+    </form>
     </table>
+    <?php
+    function walec(){
+    if (isset($_POST['r'],$_POST['h'])){
+         if($_POST['r']<=0 || $_POST['h']<=0){
+            echo "<br><h4>Liczby podane w polach powinny być dodatnei</h4>";
+        }
+        else{
+            require_once('./scripts/walec.php');
+
+
+        echo '<ul>';
+        echo '<li>Pole podstawy:'.Pole_Wale($r).'cm<sup>3</sup></li>';
+        echo '<li>Pole powierzchni bocznej:'.Polepb_Wale($r,$h).'cm<sup>3</sup></li>';
+        echo '<li>Pole powierzchni całkwitej:'.Polepc_Wale($r,$h).'cm<sup>3</sup></li>';
+        echo '<li>Objętość:'.Obje_Wale($h,$r).'cm<sup>3</sup></li>';
+        echo '</ul>';
+
+
+        }
+    }
+
+    }
+    ?>
 </body>
 </html>

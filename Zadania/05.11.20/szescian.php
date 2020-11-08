@@ -36,7 +36,7 @@ hr{
     <td><div class="baner">Dane<div></td>
     </tr>
     <tr>
-    <td><input type="number" name="a"  placeholder="a" pattern="[0-9]"></td>
+    <td><input type="number" name="a"  placeholder="a" value="<?php echo$_POST['a']?>" pattern="[0-9]"></td>
     </tr>
     <tr>
     <td><input type="submit" name="oblicz" value="Oblicz"></td>

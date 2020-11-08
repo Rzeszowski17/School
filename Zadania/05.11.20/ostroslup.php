@@ -36,10 +36,14 @@ hr{
     <td><div class="baner">Dane<div></td>
     </tr>
     <tr>
-    <td><input type="number" name="a"  placeholder="a" pattern="[0-9]"></td>
+    <td><input type="number" name="a"  placeholder="a" value="<?php echo$_POST['a']?>" pattern="[0-9]"></td>
     </tr>
     <tr>
-    <td><input type="number" name="h"  placeholder="h" pattern="[0-9]"></td>
+    <td><input type="number" name="h"  placeholder="h" value="<?php echo$_POST['h']?>" pattern="[0-9]"></td>
+    </tr>
+    <tr>
+    <tr>
+    <td><input type="submit" name="oblicz" value="Oblicz"></td>
     </tr>
     <tr>
     <td>
@@ -49,7 +53,7 @@ hr{
     </td>
     </tr>
     <tr>
-    <td><input type="submit" name="oblicz" value="Oblicz"></td>
+    <td><a href="3_zadanie_formularz_geometria.php">Powrót do strony głównej</a></td>
     </tr>
     </form>
     </table>
